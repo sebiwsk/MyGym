@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheet.css">
+<link rel="stylesheet" href="../stylesheet.css"> 
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -41,8 +41,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
     <a href="../index.html" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
     <a href="../neues-training/neues-training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Neues Training</a>
-    <a href="./uebung-hinzufuegen.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Übung hinzufügen</a>
-    <a href="../ausdauer-training/ausdauer-training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Ausdauer</a>
+    <a href="../uebung-hinzufuegen/uebung-hinzufuegen.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Übung hinzufügen</a>
+    <a href="./ausdauer-training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Ausdauer</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Span</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Span</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Span</a>
@@ -60,72 +60,63 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> Übung hinzufügen</b></h5>
+    <h5><b><i class="fa fa-dashboard"></i> Ausdauer Training</b></h5>
   </header>
 
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Name der Übung</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="saetze">Sätze</label>
-      </div>
-      <div class="col-75">
-        <select id="saetze" name="saetze">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
         <div class="col-25">
-          <label for="wiederhohlungen">Wiederhohlungen pro Satz</label>
+          <label for="fname">Datum</label>
         </div>
         <div class="col-75">
-          <input type="number" id="wiederhohlungen" name="wiederhohlungen" placeholder="Wiederhohlungen..">
+          <input type="date" id="date" name="date"">
         </div>
       </div>
-    <div class="row">
+      <div class="row">
         <div class="col-25">
-          <label for="fokus">Fokus</label>
+          <label for="ausdauer-uebung">Übung</label>
         </div>
         <div class="col-75">
-          <select id="fokus" name="fokus">
-            <option value="arme">Arme</option>
-            <option value="schultern">Schultern</option>
-            <option value="ruecken">Rücken</option>
-            <option value="bauch">Bauch</option>
-            <option value="beine">Beine</option>
+          <select id="ausdauer-uebung" name="ausdauer-uebung">
+            <option value="Joggen">Joggen</option>
+            <option value="Fahrradfahren">Fahrradfahren</option>
+            <option value="Laufband">Laufband</option>
+            <option value="Stepper">Stepper</option>
+            <option value="Rudern">Rudern</option>
           </select>
         </div>
       </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="anmerkung">Anmerkung</label>
+      <div class="row">
+          <div class="col-25">
+            <label for="kilometer">Gelaufende Kilometer</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="kilometer" name="kilometer" placeholder="Gelaufen..">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="zeit">Zeit (in Minuten)</label>
+            </div>
+            <div class="col-75">
+              <input type="number" id="zeit" name="zeit" placeholder="Zeit..">
+            </div>
+          </div>
+        
+      <div class="row">
+        <div class="col-25">
+          <label for="anmerkung">Anmerkung</label>
+        </div>
+        <div class="col-75">
+          <textarea id="anmerkung" name="anmerkung" placeholder="Anmerkung.." style="height:200px"></textarea>
+        </div>
       </div>
-      <div class="col-75">
-        <textarea id="anmerkung" name="anmerkung" placeholder="Anmerkung.." style="height:200px"></textarea>
+      <div class="row">
+        <input type="submit" value="Speichern">
       </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Speichern">
-    </div>
-  </form>
-</div>
-
- 
-
+    </form>
+  </div>
 
   <br>
   <div class="w3-container w3-dark-grey w3-padding-32">
@@ -152,6 +143,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
+  
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4>FOOTER</h4>
